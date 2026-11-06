@@ -1,0 +1,83 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramaci\u00F3n\\ACAProgramacion\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F431F778-954B-0D35-F9BA-C1635C330C0D}|ACAProgramacion\\ACAProgramacion.csproj|c:\\users\\santi\\documents\\github\\acaprogramaci\u00F3n\\acaprogramacion\\acaprogramacion\\frmlibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F431F778-954B-0D35-F9BA-C1635C330C0D}|ACAProgramacion\\ACAProgramacion.csproj|solutionrelative:acaprogramacion\\frmlibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F431F778-954B-0D35-F9BA-C1635C330C0D}|ACAProgramacion\\ACAProgramacion.csproj|C:\\Users\\santi\\Documents\\GitHub\\ACAProgramaci\u00F3n\\ACAProgramacion\\acaprogramacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F431F778-954B-0D35-F9BA-C1635C330C0D}|ACAProgramacion\\ACAProgramacion.csproj|solutionrelative:acaprogramacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F431F778-954B-0D35-F9BA-C1635C330C0D}|ACAProgramacion\\ACAProgramacion.csproj|c:\\users\\santi\\documents\\github\\acaprogramaci\u00F3n\\acaprogramacion\\acaprogramacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F431F778-954B-0D35-F9BA-C1635C330C0D}|ACAProgramacion\\ACAProgramacion.csproj|solutionrelative:acaprogramacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F431F778-954B-0D35-F9BA-C1635C330C0D}|ACAProgramacion\\ACAProgramacion.csproj|c:\\users\\santi\\documents\\github\\acaprogramaci\u00F3n\\acaprogramacion\\acaprogramacion\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F431F778-954B-0D35-F9BA-C1635C330C0D}|ACAProgramacion\\ACAProgramacion.csproj|solutionrelative:acaprogramacion\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmLibros.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramaci\u00F3n\\ACAProgramacion\\ACAProgramacion\\FrmLibros.cs",
+              "RelativeDocumentMoniker": "ACAProgramacion\\FrmLibros.cs",
+              "ToolTip": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramaci\u00F3n\\ACAProgramacion\\ACAProgramacion\\FrmLibros.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ACAProgramacion\\FrmLibros.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T02:00:48.727Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramaci\u00F3n\\ACAProgramacion\\ACAProgramacion\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "ACAProgramacion\\FrmPrincipal.cs",
+              "ToolTip": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramaci\u00F3n\\ACAProgramacion\\ACAProgramacion\\FrmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ACAProgramacion\\FrmPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T01:52:01.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmPrincipal.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramaci\u00F3n\\ACAProgramacion\\ACAProgramacion\\FrmPrincipal.Designer.cs",
+              "RelativeDocumentMoniker": "ACAProgramacion\\FrmPrincipal.Designer.cs",
+              "ToolTip": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramaci\u00F3n\\ACAProgramacion\\ACAProgramacion\\FrmPrincipal.Designer.cs",
+              "RelativeToolTip": "ACAProgramacion\\FrmPrincipal.Designer.cs",
+              "ViewState": "AgIAAEkBAAAAAAAAAAAQwFQBAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T01:44:55.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramaci\u00F3n\\ACAProgramacion\\ACAProgramacion\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "ACAProgramacion\\FrmPrincipal.cs",
+              "ToolTip": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramaci\u00F3n\\ACAProgramacion\\ACAProgramacion\\FrmPrincipal.cs",
+              "RelativeToolTip": "ACAProgramacion\\FrmPrincipal.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAA4wEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T01:32:47.405Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
