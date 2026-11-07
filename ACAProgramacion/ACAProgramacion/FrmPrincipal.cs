@@ -1,3 +1,5 @@
+using ACAProgramacion.Datos;
+
 namespace ACAProgramacion
 {
     public partial class FrmPrincipal : Form
@@ -5,6 +7,28 @@ namespace ACAProgramacion
         public FrmPrincipal()
         {
             InitializeComponent();
+            Conexion conexion = new Conexion();
+            try
+            {
+                using (var conn = conexion.ObtenerConexion())
+                {
+                    conn.Open();
+                    // La conexión se ha abierto correctamente
+                    MessageBox.Show("Conexión a la base de datos establecida correctamente.",
+                        "ACAProgramacion",
+                    MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar a la base de datos: " + ex.Message,
+                    "ACAProgramacion",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
             AbrirFormulario(new FrmInicio());
         }
 
@@ -60,6 +84,11 @@ namespace ACAProgramacion
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void dgVLibros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

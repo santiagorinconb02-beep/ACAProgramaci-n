@@ -212,6 +212,7 @@
             // 
             btnlibros.AutoSize = true;
             btnlibros.BackColor = Color.White;
+            btnlibros.Cursor = Cursors.Hand;
             btnlibros.Dock = DockStyle.Top;
             btnlibros.FlatAppearance.BorderSize = 0;
             btnlibros.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
