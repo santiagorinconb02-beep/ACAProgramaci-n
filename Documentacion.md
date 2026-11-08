@@ -70,25 +70,16 @@ manejo de excepciones y conexión con SQL Server.
 
 # 1. INTRODUCCIÓN
 
-En este apartado se debe presentar de manera general el proyecto
-desarrollado.
+La gestión eficiente de una biblioteca requiere un adecuado control de la información 
+relacionada con libros, autores, categorías, usuarios, préstamos y devoluciones. 
+Cuando estos procesos se realizan manualmente, pueden presentarse errores, 
+demoras y dificultades para acceder a la información de manera oportuna.
 
-**Texto guía:**
-
-El presente documento describe el desarrollo del **Sistema de Gestión de
-Biblioteca**, una aplicación de escritorio cuyo propósito es facilitar
-la administración de \[describir brevemente los procesos principales de
-la biblioteca\].
-
-El sistema fue desarrollado utilizando **\[C# / .NET / Windows Forms /
-SQL Server / otras tecnologías utilizadas\]**, aplicando principios de
-Programación Orientada a Objetos y una arquitectura por capas.
-
-La aplicación permite gestionar \[libros, autores, categorías, usuarios,
-préstamos, devoluciones y demás funcionalidades realmente
-implementadas\].
-
-> **Reemplazar este texto por la introducción propia del proyecto.**
+Con el fin de mejorar la administración de los recursos bibliográficos, se desarrolló 
+un sistema de gestión bibliotecaria que permite registrar, consultar y controlar la 
+información de forma organizada. Este sistema facilita la gestión de libros, autores, 
+categorías y usuarios, así como el registro de préstamos y devoluciones, contribuyendo 
+a optimizar los procesos y mejorar la calidad del servicio ofrecido por la biblioteca
 
 ------------------------------------------------------------------------
 
@@ -96,16 +87,15 @@ implementadas\].
 
 ## 2.1 Objetivo general
 
-Desarrollar un Sistema de Gestión de Biblioteca que permita \[indicar el
-propósito principal del sistema\], utilizando Programación Orientada a
-Objetos, una base de datos relacional y una arquitectura por capas.
-
-> **Reemplazar o ajustar según el proyecto desarrollado.**
+Desarrollar un sistema de gestión bibliotecaria que permita administrar libros, 
+autores, categorías y usuarios, así como controlar los préstamos y devoluciones, 
+facilitando la consulta de información y mejorando la eficiencia en los procesos 
+de la biblioteca.
 
 ## 2.2 Objetivos específicos
 
 -   Diseñar e implementar una aplicación de escritorio para la gestión
-    de \[indicar alcance\].
+    de Cantidad,categoria,control de los Libros.
 -   Aplicar principios de Programación Orientada a Objetos.
 -   Diseñar e implementar una base de datos relacional en SQL Server.
 -   Implementar operaciones CRUD para las entidades principales.
@@ -117,8 +107,7 @@ Objetos, una base de datos relacional y una arquitectura por capas.
 -   Utilizar Git y GitHub para el control de versiones.
 -   Documentar técnica y funcionalmente el proyecto.
 
-> **Eliminar o agregar objetivos según lo que realmente se haya
-> implementado.**
+
 
 ------------------------------------------------------------------------
 
@@ -126,26 +115,26 @@ Objetos, una base de datos relacional y una arquitectura por capas.
 
 ## 3.1 Descripción del problema
 
-Describir la situación que origina la necesidad del sistema.
-
-**Ejemplo:**
-
-La biblioteca actualmente presenta dificultades para administrar de
-manera organizada la información relacionada con los libros, autores,
-usuarios y préstamos. El manejo manual de esta información puede generar
-errores, pérdida de información y dificultades para conocer la
-disponibilidad de los libros.
-
-Por esta razón, se propone desarrollar una aplicación que permita
-centralizar y administrar la información de la biblioteca de manera
-organizada y eficiente.
-
-> **Adaptar el texto a la problemática definida para el proyecto.**
+La biblioteca presenta dificultades para controlar y organizar la información de 
+libros, autores, categorías, usuarios, préstamos y devoluciones. La gestión manual 
+de estos procesos puede generar errores, pérdida de información y demoras en las 
+consultas, lo que afecta la eficiencia del servicio y el control de los recursos 
+bibliográficos. Por ello, surge la necesidad de implementar un sistema que permita 
+administrar y consultar la información de forma rápida y segura.
 
 ## 3.2 Justificación
 
-Explicar por qué es importante desarrollar el sistema y qué beneficios
-proporciona.
+El desarrollo de este sistema de gestión bibliotecaria es importante porque 
+permite optimizar y automatizar los procesos relacionados con la administración 
+de libros, autores, categorías, usuarios, préstamos y devoluciones. 
+En muchas bibliotecas, el manejo manual de esta información puede generar errores, 
+pérdida de datos, retrasos en las consultas y dificultades para controlar 
+la disponibilidad de los recursos bibliográficos.
+
+La implementación del sistema proporciona una herramienta centralizada que facilita 
+el registro, actualización y consulta de la información, permitiendo una gestión más 
+eficiente y organizada. Además, mejora la experiencia de los usuarios al ofrecer 
+acceso rápido a la disponibilidad de los libros y al historial de préstamos.
 
 ## 3.3 Alcance
 
@@ -157,17 +146,18 @@ El sistema permitirá:
 -   Gestionar usuarios.
 -   Registrar préstamos.
 -   Registrar devoluciones.
+-   Registrar nuevos libros.
+-   Registrar autores.  
+-   Registrar categorías.
+-   Registrar usuarios.
 -   Consultar disponibilidad.
 -   Consultar historial de préstamos.
--   \[Agregar otras funcionalidades implementadas\].
+
 
 ### Fuera del alcance
-
-Indicar las funcionalidades que **no** forman parte de esta versión del
-proyecto.
-
--   \[Funcionalidad no incluida\].
--   \[Funcionalidad no incluida\].
+-   Gestión de multas por retraso en la devolución de libros.
+-   Acceso desde dispositivos móviles o mediante una plataforma web.
+-   Gestión de inventario de otros recursos distintos a los libros.
 
 ------------------------------------------------------------------------
 
@@ -175,23 +165,27 @@ proyecto.
 
 ## 4.1 Descripción general
 
-El Sistema de Gestión de Biblioteca permitirá administrar la información
-relacionada con \[entidades principales\] y controlar los procesos de
-\[préstamos, devoluciones, consultas, etc.\].
+El Sistema de Gestión de Biblioteca permitirá administrar la información 
+relacionada con libros, autores, categorías y usuarios, además de controlar 
+los procesos de préstamos, devoluciones y consultas de disponibilidad e historial 
+de préstamos. El sistema facilitará el registro, actualización y 
+consulta de la información de manera organizada y eficiente.
 
 ## 4.2 Actores del sistema
 
   -----------------------------------------------------------------------
   Actor                               Descripción
   ----------------------------------- -----------------------------------
-  Bibliotecario / Administrador       \[Describir las funciones que
-                                      realiza en el sistema.\]
+  Bibliotecario / Administrador       Gestiona libros, autores, categorías 
+                                      y usuarios. Además, registra préstamos, 
+                                      devoluciones y consulta la información 
+                                      almacenada en el sistema.
 
-  \[Otro actor\]                      \[Descripción.\]
+  Usuario                             Consulta la disponibilidad de los 
+                                      libros y el historial de préstamos 
+                                      asociados.
   -----------------------------------------------------------------------
 
-> **Agregar únicamente los actores que realmente interactúan con el
-> sistema.**
 
 ## 4.3 Requerimientos funcionales
 
@@ -229,11 +223,9 @@ relacionada con \[entidades principales\] y controlar los procesos de
                                                   usuarios con préstamos
                                                   activos.
 
-  RF08                    \[Otro requerimiento\]  \[Descripción.\]
+
   -----------------------------------------------------------------------
 
-> **Importante:** modificar la tabla para que coincida exactamente con
-> las funcionalidades implementadas.
 
 ## 4.4 Requerimientos no funcionales
 
@@ -269,7 +261,7 @@ relacionada con \[entidades principales\] y controlar los procesos de
                           parametrizadas          de datos deben utilizar
                                                   parámetros.
 
-  RNF08                   \[Otro requerimiento\]  \[Descripción.\]
+
   -----------------------------------------------------------------------
 
 ## 4.5 Reglas de negocio
@@ -308,9 +300,6 @@ nuevamente.
 
 La multa se calculará únicamente cuando exista retraso en la devolución.
 
-### RN09 -- \[Otra regla\]
-
-\[Descripción.\]
 
 ------------------------------------------------------------------------
 
@@ -318,8 +307,15 @@ La multa se calculará únicamente cuando exista retraso en la devolución.
 
 ## 5.1 Descripción
 
-Describir cómo interactúan los actores con las funcionalidades
-principales del sistema.
+El actor Bibliotecario/Administrador interactúa con el sistema para 
+gestionar la información de la biblioteca. Puede registrar, consultar, 
+actualizar y eliminar libros, autores, categorías y usuarios. Además, 
+realiza el registro de préstamos y devoluciones de libros, verifica su 
+disponibilidad y consulta el historial de préstamos cuando sea necesario.
+
+A través de estas funcionalidades, el sistema permite mantener organizada 
+la información bibliográfica y facilitar el control de los recursos de la 
+biblioteca.
 
 ## 5.2 Diagrama de casos de uso
 
