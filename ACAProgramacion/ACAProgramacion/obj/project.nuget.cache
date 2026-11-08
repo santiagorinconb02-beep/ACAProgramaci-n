@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M6qa3nQRVg4=",
+  "dgSpecHash": "+e3il0jugnI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramación\\ACAProgramacion\\ACAProgramacion\\ACAProgramacion.csproj",
+  "projectFilePath": "C:\\Users\\santi\\OneDrive\\Documentos\\GitHub\\ACAProgramación\\ACAProgramacion\\ACAProgramacion\\ACAProgramacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santi\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.18\\microsoft.bcl.cryptography.9.0.18.nupkg.sha512",

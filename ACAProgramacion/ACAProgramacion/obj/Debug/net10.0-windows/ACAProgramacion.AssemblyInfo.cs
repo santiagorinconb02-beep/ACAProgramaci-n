@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ACAProgramacion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dcb6caeceef28ddd066f5cb1606119cce4ec1a0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78420f1f85a5eb463e9b9a743ef615d367dd3536")]
 [assembly: System.Reflection.AssemblyProductAttribute("ACAProgramacion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ACAProgramacion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1207,11 +1207,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramación\\ACAProgramacion\\ACAProgramacion\\ACAProgramacion.csproj",
+      "projectUniqueName": "C:\\Users\\santi\\OneDrive\\Documentos\\GitHub\\ACAProgramación\\ACAProgramacion\\ACAProgramacion\\ACAProgramacion.csproj",
       "projectName": "ACAProgramacion",
-      "projectPath": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramación\\ACAProgramacion\\ACAProgramacion\\ACAProgramacion.csproj",
+      "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\GitHub\\ACAProgramación\\ACAProgramacion\\ACAProgramacion\\ACAProgramacion.csproj",
       "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\santi\\Documents\\GitHub\\ACAProgramación\\ACAProgramacion\\ACAProgramacion\\obj\\",
+      "outputPath": "C:\\Users\\santi\\OneDrive\\Documentos\\GitHub\\ACAProgramación\\ACAProgramacion\\ACAProgramacion\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
