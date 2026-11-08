@@ -45,9 +45,6 @@ manejo de excepciones y conexión con SQL Server.
 
 # TABLA DE CONTENIDO
 
-> **Nota:** Actualizar esta sección al finalizar el documento, de
-> acuerdo con la numeración real de las páginas.
-
 1.  Introducción
 2.  Objetivos
     -   2.1 Objetivo general
@@ -364,8 +361,7 @@ Verificar disponibilidad. 4. Registrar préstamo. 5. Actualizar
 disponibilidad. 6. Mostrar confirmación.
 
 **Flujos alternativos:** - Usuario inexistente. - Libro inexistente. -
-Libro sin disponibilidad. - \[Otro caso.\]
-
+Libro sin disponibilidad. - 
 **Postcondiciones:** - El préstamo queda registrado. - La disponibilidad
 del libro queda actualizada.
 
@@ -384,7 +380,10 @@ devolución. 3. Calcular días de retraso. 4. Calcular multa cuando
 corresponda. 5. Actualizar disponibilidad. 6. Actualizar el estado del
 préstamo. 7. Mostrar confirmación.
 
-**Flujos alternativos:** - \[Describir situaciones de error.\]
+**Flujos alternativos:** - El préstamo seleccionado no existe.
+El préstamo ya fue devuelto previamente.
+Ocurre un error al actualizar la disponibilidad del libro.
+Los datos ingresados son inválidos o incompletos.
 
 **Postcondiciones:** - La devolución queda registrada. - El libro vuelve
 a estar disponible según corresponda.
@@ -395,14 +394,13 @@ a estar disponible según corresponda.
 
 ## 6.1 Descripción
 
-Describir las principales clases utilizadas en el sistema y su
-responsabilidad.
+El sistema está compuesto por las clases Autor, Libro, Categoría, Usuario, Préstamo, DetallePréstamo, Devolución y Conexión, las cuales permiten gestionar la información y los procesos principales de la biblioteca.
 
 ## 6.2 Diagrama de clases
 
 Insertar aquí el diagrama de clases.
 
-`![Diagrama de clases](ruta/al/diagrama-clases.png)`
+`![Diagrama de clases](![Diagrama de clases](<Diagrama De Clases - Biblioteca-1.png>))`
 
 ## 6.3 Principales clases
 
@@ -415,7 +413,7 @@ Insertar aquí el diagrama de clases.
   Prestamo          Gestionar la información de los préstamos.
   DetallePrestamo   Relacionar los libros incluidos en un préstamo.
   Devolucion        Gestionar las devoluciones y calcular retrasos/multas.
-  \[Otra clase\]    \[Responsabilidad.\]
+  Conexion	        Gestionar la conexión entre el sistema y la base de datos.
 
 ## 6.4 Aplicación de POO
 
@@ -438,27 +436,25 @@ Explicar cómo se aplicaron:
 
 ## 7.1 Descripción
 
-Explicar el modelo de datos diseñado para almacenar la información del
-sistema.
+El modelo entidad-relación fue diseñado para almacenar y gestionar la información necesaria para el funcionamiento del sistema de biblioteca. Está compuesto por las entidades Autor, Libro, Categoría, Usuario, Préstamo, DetallePréstamo y Devolución, las cuales permiten administrar el catálogo de libros, los usuarios registrados y las operaciones de préstamo y devolución. Las relaciones entre estas entidades garantizan la integridad y consistencia de la información almacenada en la base de datos.
 
 ## 7.2 Diagrama entidad-relación
 
 Insertar aquí el modelo entidad-relación.
 
-`![Modelo entidad-relación](ruta/al/modelo-entidad-relacion.png)`
+`![![Diagrama](<Diagrama De Clases - Biblioteca.png>))`
 
 ## 7.3 Relaciones principales
 
-Describir las relaciones entre las entidades.
-
-**Ejemplo:**
-
--   Un autor puede tener muchos libros.
--   Una categoría puede estar asociada a muchos libros.
--   Un usuario puede realizar muchos préstamos.
--   Un préstamo puede contener uno o varios detalles.
--   Un detalle de préstamo corresponde a un libro.
--   Un detalle puede generar una devolución.
+Un autor puede estar asociado a uno o varios libros.
+Un libro pertenece a una única categoría.
+Una categoría puede contener varios libros.
+Un usuario puede realizar uno o varios préstamos.
+Un préstamo puede incluir uno o varios libros.
+Cada detalle de préstamo corresponde a un único libro.
+Un préstamo puede tener uno o varios detalles de préstamo.
+Un detalle de préstamo puede generar una devolución.
+Una devolución está asociada a un único detalle de préstamo.
 
 > **Modificar según el modelo de base de datos realmente implementado.**
 
@@ -667,14 +663,14 @@ Gestiona la comunicación entre la aplicación y SQL Server.
 **Tecnologías utilizadas:**
 
 -   SQL Server.
--   ADO.NET / \[tecnología realmente utilizada\].
+-   ADO.NET / .
 -   Consultas parametrizadas.
 
 ## 9.6 Capa de Base de Datos
 
 La información del sistema se almacena en:
 
-**Base de datos:** `[NombreBaseDatos]`
+**Base de datos:** `[SQLQuery5.sql]`
 
 **Tablas principales:**
 
@@ -709,41 +705,43 @@ llegar nuevamente a la interfaz.
 
 ## 10.1 Módulo de libros
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** Administrar la información de los libros disponibles en la biblioteca, permitiendo su registro, consulta, actualización y eliminación.
 
 **Funcionalidades:** - Registrar. - Consultar. - Actualizar. -
 Eliminar. - Buscar.
 
-**Validaciones:** - \[Validación.\] - \[Validación.\]
+**Validaciones:** - El código del libro debe ser único.
+Los campos obligatorios no pueden estar vacíos.
+La cantidad de ejemplares debe ser mayor o igual a cero.
 
 ## 10.2 Módulo de autores
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** Gestionar la información de los autores asociados a los libros registrados en la biblioteca.
 
 **Funcionalidades:** - Registrar. - Consultar. - Actualizar. - Eliminar.
 
 ## 10.3 Módulo de categorías
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** Administrar las categorías utilizadas para clasificar los libros.
 
 **Funcionalidades:** - Registrar. - Consultar. - Actualizar. - Eliminar.
 
 ## 10.4 Módulo de usuarios
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** Gestionar la información de los usuarios que pueden realizar préstamos de libros.
 
 **Funcionalidades:** - Registrar. - Consultar. - Actualizar. - Eliminar.
 
 ## 10.5 Módulo de préstamos
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** Registrar y controlar los préstamos de libros realizados por los usuarios de la biblioteca.
 
 **Funcionalidades:** - Registrar préstamo. - Consultar préstamos
 activos. - Consultar historial. - Actualizar disponibilidad.
 
 ## 10.6 Módulo de devoluciones
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** Gestionar la devolución de libros prestados y controlar posibles retrasos y multas.
 
 **Funcionalidades:** - Registrar devolución. - Calcular días de
 retraso. - Calcular multa cuando aplique. - Actualizar disponibilidad.
@@ -759,7 +757,7 @@ retraso. - Calcular multa cuando aplique. - Actualizar disponibilidad.
 -   Usuarios con préstamos activos.
 -   Historial de préstamos.
 -   Libros más prestados.
--   \[Otras consultas implementadas.\]
+-
 
 > **Eliminar las consultas que no estén implementadas y agregar las que
 > sí existan.**
@@ -803,24 +801,16 @@ funcionalidades.
 
 ## 11.6 Registro de préstamos
 
-![Registro de préstamos](ruta/captura-prestamos.png)
+![Registro de préstamos]("C:\Users\santi\OneDrive\Documentos\GitHub\ACAProgramación\Capturas de pantalla funcionalidad\Registro de Prestamos.png")
 
-**Descripción:** \[Explicar la funcionalidad.\]
+**Descripción:** \REegistro de usuarios fecha de prestamo y fecha en que tiene que devolverlo
 
 ## 11.7 Registro de devoluciones
 
-![Registro de devoluciones](ruta/captura-devoluciones.png)
+![Registro de devoluciones]("C:\Users\santi\OneDrive\Documentos\GitHub\ACAProgramación\Capturas de pantalla funcionalidad\Registro de Devoluciones.png")
 
-**Descripción:** \[Explicar la funcionalidad.\]
+**Descripción:** Se evidencia registro de los usuarios que ya devolvieron lso libros
 
-## 11.8 Consultas
-
-![Consultas](ruta/captura-consultas.png)
-
-**Descripción:** \[Explicar la funcionalidad.\]
-
-> **Recomendación:** cada captura debe tener una breve explicación y
-> mostrar una funcionalidad real del sistema.
 
 ------------------------------------------------------------------------
 
@@ -864,8 +854,7 @@ Describir cómo se verificó el funcionamiento del sistema.
   CP08        Consulta        Consultar libros Mostrar libros   \[Resultado\]   Aprobado
                               disponibles      disponibles                      
 
-  CP09        \[Otra prueba\] \[Entrada\]      \[Resultado      \[Resultado\]   \[Estado\]
-                                               esperado\]                       
+                
   ------------------------------------------------------------------------------------------
 
 ## 12.3 Evidencias de pruebas
@@ -876,13 +865,13 @@ Insertar capturas que demuestren los resultados de las pruebas.
 
 ![Evidencia CP01](ruta/prueba01.png)
 
-**Resultado:** \[Descripción.\]
+**Resultado:** Registro del libro de manera exitosa
 
 ### Prueba CP02
 
 ![Evidencia CP02](ruta/prueba02.png)
 
-**Resultado:** \[Descripción.\]
+**Resultado:** Se evidencia que genera error al registrar el mismo codigo con otro libro
 
 ------------------------------------------------------------------------
 
@@ -890,55 +879,37 @@ Insertar capturas que demuestren los resultados de las pruebas.
 
 ## Conclusión 1
 
-\[Explicar qué se logró con el desarrollo del proyecto.\]
+Se desarrolló un sistema de gestión bibliotecaria que permite administrar libros, autores, categorías, usuarios, préstamos y devoluciones.
 
 ## Conclusión 2
-
-\[Explicar los conocimientos de Programación Orientada a Objetos
-aplicados.\]
+Se aplicaron los conceptos de Programación Orientada a Objetos para diseñar una solución organizada y estructurada.
 
 ## Conclusión 3
 
-\[Explicar los resultados obtenidos con la base de datos y la
-arquitectura por capas.\]
-
+La base de datos permitió almacenar y gestionar la información de forma segura y eficiente.
 ## Conclusión 4
 
-\[Explicar dificultades encontradas y cómo fueron solucionadas.\]
+Las dificultades encontradas durante el desarrollo fueron solucionadas mediante pruebas y correcciones continuas.
 
 ------------------------------------------------------------------------
 
 # 14. RECOMENDACIONES
 
--   \[Recomendación relacionada con futuras mejoras.\]
--   \[Recomendación relacionada con seguridad.\]
--   \[Recomendación relacionada con mantenimiento.\]
--   \[Recomendación relacionada con nuevas funcionalidades.\]
--   \[Otra recomendación.\]
+Implementar mecanismos de autenticación para mejorar la seguridad.
+Realizar copias de seguridad periódicas de la base de datos.
+Documentar futuros cambios para facilitar el mantenimiento.
+Agregar nuevas funcionalidades como reportes y reservas de libros.
 
 ------------------------------------------------------------------------
 
 # 15. REFERENCIAS BIBLIOGRÁFICAS
 
-> Utilizar **Normas APA, última edición**.
-
-Ejemplos de formato:
-
-**Libro:**
-
-Apellido, N. (Año). *Título del libro*. Editorial.
 
 **Página web:**
 
-Autor/Organización. (Año). *Título del recurso*. URL
+[Autor/Organización. (Año). *Título del recurso*. URL](https://cdigital.cun.edu.co/mod/googlemeet/view.php?id=7929158)
 
-**Documentación técnica:**
 
-Microsoft. (Año). *\[Título de la documentación consultada\]*. Microsoft
-Learn.
-
-> **Importante:** incluir únicamente las fuentes que realmente fueron
-> consultadas durante el desarrollo del proyecto.
 
 ------------------------------------------------------------------------
 
@@ -946,11 +917,11 @@ Learn.
 
 ## Anexo A. Repositorio GitHub
 
-**Repositorio:** \[Enlace al repositorio\]
-
+**Repositorio:** [\\[Enlace al repositorio\\]](https://github.com/santiagorinconb02-beep/ACAProgramaci-n)
+- https://github.com/VeronicaRep/AcaBiblioteca/blob/main/Documentacion.md
 ## Anexo B. Script de base de datos
 
-**Archivo:** `[Nombre del archivo .sql]`
+**Archivo:** `[SQLQuery5.sql]`
 
 ## Anexo C. Evidencia de Git y GitHub
 
@@ -962,9 +933,6 @@ Insertar capturas que evidencien:
 -   Publicación del código.
 -   README.md.
 
-## Anexo D. Otras evidencias
-
-\[Agregar cualquier evidencia adicional relevante.\]
 
 ------------------------------------------------------------------------
 
