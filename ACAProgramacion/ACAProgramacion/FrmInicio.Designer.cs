@@ -28,12 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmInicio";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
+            pictureBoxFondo = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxFondo).BeginInit();
+            SuspendLayout();
+            // 
+            // pictureBoxFondo
+            // 
+            pictureBoxFondo.BackColor = Color.Transparent;
+            pictureBoxFondo.Image = (Image)resources.GetObject("pictureBoxFondo.Image");
+            pictureBoxFondo.Location = new Point(-198, -1);
+            pictureBoxFondo.Name = "pictureBoxFondo";
+            pictureBoxFondo.Size = new Size(2100, 1000);
+            pictureBoxFondo.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxFondo.TabIndex = 4;
+            pictureBoxFondo.TabStop = false;
+            // 
+            // FrmInicio
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1350, 729);
+            Controls.Add(pictureBoxFondo);
+            Name = "FrmInicio";
+            Text = "FrmInicio";
+            ((System.ComponentModel.ISupportInitialize)pictureBoxFondo).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox pictureBoxFondo;
     }
 }

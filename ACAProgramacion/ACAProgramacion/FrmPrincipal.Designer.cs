@@ -340,6 +340,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sitema Gestión De Biblioteca";
             WindowState = FormWindowState.Maximized;
+            Load += FrmPrincipal_Load;
             pnlMenu.ResumeLayout(false);
             pnlMenu.PerformLayout();
             pnlLogo.ResumeLayout(false);
